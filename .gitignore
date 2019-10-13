@@ -1,0 +1,7 @@
+node_modules
+.history
+.github
+
+docs
+site
+dist
