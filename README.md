@@ -2,6 +2,10 @@
 
 Waves effect directive for Vue. Based on [Waves](https://github.com/fians/Waves).
 
+## Documentation & Demo
+
+[https://v-waves.isnur.com/](https://v-waves.isnur.com/)
+
 ## Installation
 
 ```bash
@@ -10,12 +14,16 @@ Waves effect directive for Vue. Based on [Waves](https://github.com/fians/Waves)
 
 ## Usage
 
-Import the directive and add it to Vue.
+Import the plugin and add it to Vue.
 
 ```vue
-import WavesEffect from 'vue-waves-effect'
+  // src/main.js
 
-Vue.directive('waves', WavesEffect);
+  import Vue from 'vue';
+  import Waves from 'vue-waves-effect';
+  import 'vue-waves-effect/dist/vueWavesEffect.css';
+
+  Vue.use(Waves);
 ```
 
 Then use on any element in the template.
@@ -52,10 +60,10 @@ To use helper classes just pass modifiers to the directive:
 
 ## Config
 
-You can also configure Waves by passing option parameter on directive.
+You can also configure Waves by passing option parameter.
 
 ```vue
-Vue.directive(Waves, {
+Vue.use(Waves, {
     duration: 500,
     delay: 200
 });
