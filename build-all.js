@@ -9,7 +9,7 @@ const DOCS_FOLDER = 'docs';
     try {
         // const indexPath = path.join('src', 'index.js');
         // build lib
-        let { stdout, stderr } = await exec(`npm run build`);
+        let { stdout, stderr } = await exec(`npm run dist`);
         // if (stderr) {
         //     console.log(stderr);
         // }

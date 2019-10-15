@@ -1,6 +1,6 @@
 {
   "name": "vue-waves-effect",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Waves effect directive for Vue. Based on Waves.",
   "keywords": [
     "vue",
@@ -18,8 +18,8 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "node build-lib.js",
-    "build:all": "node build-all.js",
+    "dist": "node build-lib.js",
+    "build": "node build-all.js",
     "dev": "cd site && npm start",
     "start": "npm run dev",
     "release": "release-it"

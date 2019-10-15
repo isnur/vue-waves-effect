@@ -1,0 +1,260 @@
+@import url('reset.css')
+
+$link-color: #3eaf7c
+
+html,
+body
+    padding: 0
+    margin: 0
+
+body
+    background-color: #fff
+    color: #555
+    display: flex
+    flex-direction: column
+    line-height: 1.5rem
+    height: 100vh
+
+a
+    color: $link-color
+
+strong
+    font-weight: bold
+
+p
+    margin: 5px 0
+
+ol, ul
+    margin: 15px 0
+
+    li
+        margin-left: 20px
+
+ul
+    list-style: disc
+
+ol
+    list-style: decimal
+
+#app
+    display: flex
+    flex: auto 1 1
+    flex-direction: column
+    max-height: 100vh
+    overflow: hidden
+
+.small
+    margin: 0
+    text-shadow: none
+    font-size: 10px
+    align-self: flex-end
+    font-style: italic
+    color: white
+
+.menu-handle
+    background: transparent url('../img/menu-icon.svg') no-repeat
+    background-size: 32px 32px
+    cursor: pointer
+    display: inline-block
+    margin-right: 15px
+    height: 32px
+    width: 32px
+
+header.waves-effect
+    align-items: center
+    background: rgb(200,230,201)
+    background: linear-gradient(90deg, rgba(200,230,201,1) 0%, rgba(76,175,80,1) 50%, rgba(56,142,60,1) 100%)
+    display: flex
+    flex: auto 0 0
+    font-size: 1.5rem
+    padding: 10px 20px
+    z-index: 10
+    .title
+        display: flex
+        flex-direction: column
+    i
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-right: 20px
+        
+    .logo
+        height: 24px
+
+    h1
+        color: #fff
+        margin: 0
+        line-height: 1em
+        text-shadow: 1px 1px 2px #000, -1px -1px 1px #777
+
+        .one-liner
+            color: #555
+            display: block
+            font-size: 1.2rem
+            text-shadow: none
+
+
+.content
+    display: flex
+    flex: auto 1 1
+    position: relative
+    height: 100%
+
+menu
+    background-color: #C8E6C9
+    box-shadow: 1px 1px 6px #333
+    color: #aaa
+    display: flex
+    flex: auto 1 1
+    flex-direction: column
+    width: 70%
+    max-width: 180px
+    padding: 10px 15px
+    position: absolute
+    left: 0
+    top: 0
+    bottom: 0
+    overflow-y: auto
+    transition: box-shadow .3s, transform .3s
+    transform: translateX(0%)
+
+    &.hidden
+        box-shadow: 0px 0px 0px #333
+        transform: translateX(-100%)
+
+
+    ul
+        list-style: none
+        margin: 0
+        padding: 0
+        li
+            a   
+                width: 100%
+                color: #525252
+                border-bottom: 1px dashed rgba(0,0,0,.1)
+                display: block
+
+    a
+        color: #4f5959
+        text-decoration: none
+    
+    .router-link-exact-active
+        color: #42b983
+
+    .github-logo
+        background: transparent url('../img/github-logo.svg') no-repeat left center
+        display: inline-block
+        background-size: 40px 20px
+        span.label
+            padding: 35px
+
+    .lists
+        flex: auto 1 1
+
+    footer
+        flex: auto 0 0
+
+        p
+            margin: 0
+
+main
+    flex: auto 1 1
+    height: 100%
+    overflow-y: scroll
+    padding: 0 10px
+
+    h3, h4, h5
+        color: #000
+        font-size: 1.35rem
+        margin: 35px 0 25px 0
+
+    h4
+        font-size: 1.25rem
+        margin: 20px 0 10px 0
+
+    h5
+        font-size: 1.15rem
+        margin: 10px 0 5px 0
+
+code
+    color: #222
+    padding: .25rem .5rem
+    margin: 0
+    font-family: source-code-pro,Menlo,Monaco,Consolas,Courier New,monospace
+    font-size: .85em
+    background-color: #9999995e
+    border-radius: 3px
+
+pre 
+    overflow: hidden
+    width: 100%
+    margin: 0
+    display: flex
+    code
+        width: 100%
+        display: block
+        line-height: 1.15rem
+        overflow-x: auto
+
+section
+    margin-bottom: 20px
+
+.custom-block.warning
+    background-color: rgba(255,229,100,.3)
+    border-color: #e7c000
+    color: #6b5900
+    padding: .1rem 1.5rem
+    border-left-width: .5rem
+    border-left-style: solid
+    margin: 1rem 0
+
+// DESKTOP VERSION
+@media (min-width: 992px)
+
+    .menu-handle
+        display: none
+
+    .small
+        font-size: 12px
+
+    header.waves-effect
+        font-size: 2.4rem
+        height: 140px
+        background: linear-gradient(90deg, rgba(200,230,201,1) 0%, rgba(76,175,80,1) 30%, rgba(56,142,60,1) 100%)
+
+        .logo
+            height: 50px
+
+        h1
+            .one-liner
+                margin-left: 15px
+                margin-top: 4px
+
+    menu
+        box-shadow: none
+        min-width: 180px
+        width: 180px
+        position: static
+        transition: box-shadow .3s, transform .3s
+        transform: none
+
+        &.hidden
+            transform: none
+
+    main
+        padding: 0 30px
+
+
+.fade-in
+    opacity: 0
+    animation: fadeIn ease 1.5s
+    animation-delay: 300ms
+    animation-fill-mode: both
+
+
+@keyframes fadeIn
+    0%
+        opacity: 0
+
+    100%
+        opacity:1

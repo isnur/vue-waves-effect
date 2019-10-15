@@ -1,0 +1,41 @@
+@import 'node-waves/src/sass/waves.sass'
+
+/*!
+ *  Vue Waves Effect
+ *
+ *  Copyright 2019 Isnur MSM and other contributors
+ *  Released under the MIT license
+
+.waves-pressed
+    padding: 5px 15px
+    text-align: center
+    cursor: pointer
+    outline: none
+    color: inherit
+    border: none
+    border-radius: 15px
+    box-shadow: 0 5px #999
+
+.waves-pressed:active
+    background-color: rgba(0, 0, 0, 0.1)
+    box-shadow: 0 5px #666
+    transform: translateY(4px)
+
+.waves-shake:hover
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both
+  transform: translate3d(0, 0, 0)
+  backface-visibility: hidden
+  perspective: 1000px
+
+@keyframes shake
+  10%, 90%
+    transform: translate3d(-1px, 0, 0)
+  
+  20%, 80%
+    transform: translate3d(2px, 0, 0)
+
+  30%, 50%, 70%
+    transform: translate3d(-4px, 0, 0)
+
+  40%, 60%
+    transform: translate3d(4px, 0, 0)
