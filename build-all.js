@@ -16,13 +16,10 @@ const DOCS_FOLDER = 'docs';
 
         // build site
         await fs.emptyDir(DOCS_FOLDER); // empty the <docs> folder
-        try {
-            process.chdir(path.join(__dirname, 'site'));
-            console.log('dir: ' + process.cwd());
-        } catch (error) {
-            console.log('error change dir');
-        }
-        let { stdout: sout, stderr: serr } = await exec(`npm install && npm run build`);
+
+        console.log('dir from: ' + process.cwd());
+        let { stdout: sout, stderr: serr } = await exec(`cd site`);
+        console.log('dir to: ' + process.cwd());
         console.log(serr, sout);
         if (serr) {
             console.log(sout);
