@@ -16,11 +16,23 @@ const DOCS_FOLDER = 'docs';
 
         // build site
         await fs.emptyDir(DOCS_FOLDER); // empty the <docs> folder
+        const process = require('process'); 
+        
+        try { 
+        
+            // Change the directory 
+            await process.chdir('site'); 
+            console.log("directory has successfully been changed");
 
-        let { stdout: sout, stderr: serr } = await exec(`cd site && npm run build`);
-        console.log(serr, sout);
-        if (serr) {
-            console.log(sout);
+            let { stdout: sout, stderr: serr } = await exec(`npm run build`);
+            console.log(serr, sout);
+            if (serr) {
+                console.log(sout);
+            }
+        } catch (err) { 
+            
+            // Printing error if occurs 
+            console.error("error while changing directory"); 
         }
 
         // copy the site <site/dist> in <docs>
