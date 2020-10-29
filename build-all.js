@@ -15,7 +15,11 @@ const DOCS_FOLDER = 'docs';
         await fs.emptyDir(DOCS_FOLDER); // empty the <docs> folder
 
         console.log('dir from: ' + process.cwd());
-        await exec(`cd site`);
+        let { stdout: out, stderr: err } = await exec(`cd ./site`);
+        console.log(err, out);
+        if (err) {
+            console.log(out);
+        }
         console.log('dir to: ' + process.cwd());
         let { stdout: sout, stderr: serr } = await exec(`npm run build`);
         console.log(serr, sout);
