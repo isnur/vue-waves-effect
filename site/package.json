@@ -5,6 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "copy": "cp -a ./dist/. ../docs/",
     "start": "npm run serve",
     "lint": "vue-cli-service lint",
     "test:e2e": "vue-cli-service test:e2e",

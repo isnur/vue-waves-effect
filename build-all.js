@@ -17,14 +17,14 @@ const DOCS_FOLDER = 'docs';
         // build site
         await fs.emptyDir(DOCS_FOLDER); // empty the <docs> folder
 
-        let { stdout: sout, stderr: serr } = await exec(`cd ${path.join(__dirname, 'site')} && npm run build --scripts-prepend-node-path=true`);
-        console.log(serr, sout);
-        if (serr) {
-            console.log(sout);
-        }
+        // let { stdout: sout, stderr: serr } = await exec(`cd site && npm run build`);
+        // console.log(serr, sout);
+        // if (serr) {
+        //     console.log(sout);
+        // }
 
-        // copy the site <site/dist> in <docs>
-        await fs.copy(path.join(__dirname, 'site', 'dist'), path.join(__dirname, DOCS_FOLDER));
+        // // copy the site <site/dist> in <docs>
+        // await fs.copy(path.join(__dirname, 'site', 'dist'), path.join(__dirname, DOCS_FOLDER));
     } catch (err) {
         console.error(err);
     }
