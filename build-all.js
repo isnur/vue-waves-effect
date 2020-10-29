@@ -22,7 +22,7 @@ const DOCS_FOLDER = 'docs';
         } catch (error) {
             console.log('error change dir');
         }
-        let { stdout: sout, stderr: serr } = await exec(`npm install yarn -g && yarn install && yarn build`);
+        let { stdout: sout, stderr: serr } = await exec(`npm install && npm run build`);
         console.log(serr, sout);
         if (serr) {
             console.log(sout);
