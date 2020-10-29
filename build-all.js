@@ -9,17 +9,15 @@ const DOCS_FOLDER = 'docs';
     try {
         // const indexPath = path.join('src', 'index.js');
         // build lib
-        let { stdout, stderr } = await exec(`npm run dist`);
-        // if (stderr) {
-        //     console.log(stderr);
-        // }
+        await exec(`npm run dist`);
 
         // build site
         await fs.emptyDir(DOCS_FOLDER); // empty the <docs> folder
 
         console.log('dir from: ' + process.cwd());
-        let { stdout: sout, stderr: serr } = await exec(`cd site`);
+        await exec(`cd site`);
         console.log('dir to: ' + process.cwd());
+        let { stdout: sout, stderr: serr } = await exec(`npm run build`);
         console.log(serr, sout);
         if (serr) {
             console.log(sout);
