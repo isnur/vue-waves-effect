@@ -24,7 +24,7 @@ const DOCS_FOLDER = 'docs';
             await process.chdir('site'); 
             console.log("directory has successfully been changed");
 
-            let { stdout: sout, stderr: serr } = await exec(`npm run build`);
+            let { stdout: sout, stderr: serr } = await exec(`npm run build --scripts-prepend-node-path`);
             console.log(serr, sout);
             if (serr) {
                 console.log(sout);
