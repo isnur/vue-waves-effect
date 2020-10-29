@@ -16,10 +16,13 @@ const DOCS_FOLDER = 'docs';
 
         // build site
         await fs.emptyDir(DOCS_FOLDER); // empty the <docs> folder
-
-        await process.chdir(path.join(__dirname, 'site'));
-
-        let { stdout: sout, stderr: serr } = await exec(`npm run build`);
+        try {
+            process.chdir(path.join(__dirname, 'site'));
+            console.log('dir: ' + process.cwd());
+        } catch (error) {
+            console.log('error change dir');
+        }
+        let { stdout: sout, stderr: serr } = await exec(`npm run build --scripts-prepend-node-path`);
         console.log(serr, sout);
         if (serr) {
             console.log(sout);
