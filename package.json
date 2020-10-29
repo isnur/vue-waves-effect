@@ -22,7 +22,7 @@
     "all": "node build-all.js",
     "build": "npm-run-all all site",
     "dev": "cd site && npm start",
-    "site": "cd site && npm run build && npm run copy",
+    "site": "cd site && npm install && npm run build && npm run copy",
     "start": "npm run dev",
     "release": "release-it"
   },
