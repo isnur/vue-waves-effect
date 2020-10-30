@@ -38,12 +38,16 @@ export default {
             unbind (el, binding, vnode, oldVnode) {
                 try {
                     document.querySelectorAll('.waves-ripple').forEach(e => e.remove());
-                } catch (e) { console.log(e); }
+                } catch (e) {
+
+                }
             },
             componentUpdated (el, binding, vnode, oldVnode) {
                 try {
                     document.querySelectorAll('.waves-ripple').forEach(e => e.remove());
-                } catch (e) { console.log(e); }
+                } catch (e) {
+                    
+                }
             }
         });
     }
