@@ -46,7 +46,7 @@ export default {
                 try {
                     document.querySelectorAll('.waves-ripple').forEach(e => e.remove());
                 } catch (e) {
-                    
+
                 }
             }
         });

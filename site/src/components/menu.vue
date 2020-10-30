@@ -43,7 +43,7 @@ export default {
     }
   },
   methods: {
-    mouseover(e) {
+    mouseover() {
         window.vueWavesEffect.ripple(this, { wait: null });
     }
   }
