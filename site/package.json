@@ -26,7 +26,7 @@
     "@vue/cli-service": "4.5.8",
     "@vue/test-utils": "1.1.0",
     "babel-eslint": "10.1.0",
-    "chai": "4.2.0",
+    "chai": "4.3.0",
     "cli-plugin-eslint": "0.1.0",
     "eslint": "7.12.1",
     "eslint-loader": "4.0.2",
