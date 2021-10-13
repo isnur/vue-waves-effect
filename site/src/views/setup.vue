@@ -81,8 +81,9 @@
     <p>
       <code>sudo yarn global add @vue/cli</code>
     </p>
-    <p style="margin-bottom: 30px;">
+    <p>
       <code>sudo yarn global add @vue/cli-service-global</code>
     </p>
+    <div class="clearfix"></div>
   </main>
 </template>

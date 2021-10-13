@@ -80,5 +80,6 @@
       We are open to contributions, see
       <a href="https://github.com/isnur/vue-waves-effect/blob/master/CONTRIBUTING.md">CONTRIBUTING.md</a> for more info.
     </p>
+    <div class="clearfix"></div>
   </main>
 </template>
