@@ -13,7 +13,7 @@
     "clean": "rm -rf node_module && rm -rf yarn.lock && yarn install"
   },
   "dependencies": {
-    "core-js": "3.8.3",
+    "core-js": "3.38.1",
     "vue": "2.6.12",
     "vue-router": "3.4.8",
     "vuex": "3.5.1"
