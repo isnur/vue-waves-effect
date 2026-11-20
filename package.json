@@ -30,11 +30,11 @@
     "node-waves": "0.7.6"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "4.5.8",
-    "@vue/cli-plugin-e2e-cypress": "4.5.8",
-    "@vue/cli-plugin-eslint": "4.5.8",
-    "@vue/cli-plugin-unit-mocha": "4.5.8",
-    "@vue/cli-service": "4.5.8",
+    "@vue/cli-plugin-babel": "4.5.19",
+    "@vue/cli-plugin-e2e-cypress": "4.5.19",
+    "@vue/cli-plugin-eslint": "4.5.19",
+    "@vue/cli-plugin-unit-mocha": "4.5.19",
+    "@vue/cli-service": "4.5.19",
     "@vue/test-utils": "1.1.0",
     "eslint": "7.19.0",
     "eslint-config-standard-extended": "1.0.1",
